@@ -10,7 +10,7 @@ const Hero = () => {
   const titleWords = ["Bangun", "Masa Depan", "Bersama Kami"];
 
   return (
-    <section id="beranda" className="relative overflow-hidden" style={{ minHeight: "520px", maxHeight: "620px", height: "65vh" }}>
+    <section id="beranda" className="relative overflow-hidden" style={{ minHeight: "620px", maxHeight: "780px", height: "80vh" }}>
       <motion.div className="absolute inset-0" style={{ y }}>
         <img
           src={heroImg}
