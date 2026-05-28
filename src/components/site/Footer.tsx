@@ -60,7 +60,7 @@ const Footer = () => {
               <h4 className="font-display font-bold text-lg mb-5">Informasi PPDB</h4>
               <ul className="space-y-3 text-sm opacity-85">
                 {["Pendaftaran Online", "Syarat & Ketentuan", "Jadwal Seleksi", "Biaya Pendidikan", "FAQ"].map((l) => (
-                  <li key={l}><a href="#ppdb" className="hover:text-accent hover:translate-x-1 inline-block transition-all duration-300">{l}</a></li>
+                  <li key={l}><a href="/ppdb" className="hover:text-accent hover:translate-x-1 inline-block transition-all duration-300">{l}</a></li>
                 ))}
               </ul>
             </div>

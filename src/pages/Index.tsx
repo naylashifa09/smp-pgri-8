@@ -6,7 +6,7 @@ import Stats from "@/components/site/Stats";
 import Facilities from "@/components/site/Facilities";
 import News from "@/components/site/News";
 import Gallery from "@/components/site/Gallery";
-import PPDBForm from "@/components/site/PPDBForm";
+import FAQ from "@/components/site/FAQ";
 import Contact from "@/components/site/Contact";
 import Footer from "@/components/site/Footer";
 
@@ -21,7 +21,7 @@ const Index = () => {
       <Facilities />
       <News />
       <Gallery />
-      <PPDBForm />
+      <FAQ />
       <Contact />
       <Footer />
     </main>

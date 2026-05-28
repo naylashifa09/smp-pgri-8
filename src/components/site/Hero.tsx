@@ -64,7 +64,7 @@ const Hero = () => {
             className="mt-10 flex flex-wrap gap-3"
           >
             <Button variant="hero" size="xl" asChild className="hover:scale-105 transition-transform">
-              <a href="#ppdb">
+              <a href="/ppdb">
                 Daftar PPDB Online <ArrowRight className="h-5 w-5" />
               </a>
             </Button>

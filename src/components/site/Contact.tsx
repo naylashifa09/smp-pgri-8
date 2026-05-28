@@ -22,7 +22,7 @@ const Contact = () => (
           { icon: Mail, t: "Email", d: "info@smppgri8bogor.sch.id\nppdb@smppgri8bogor.sch.id" },
         ].map((c, idx) => (
           <ScrollReveal key={c.t} animation="slide-up" delay={idx * 100}>
-            <div className="bg-card rounded-2xl p-6 border border-border shadow-card hover:shadow-elevated hover:scale-105 transition-all duration-300">
+            <div className="bg-card rounded-2xl p-6 border border-border shadow-card hover:shadow-elevated hover:scale-105 transition-all duration-300 h-full">
               <div className="flex items-start gap-4">
                 <div className="h-12 w-12 rounded-xl bg-primary-soft text-primary grid place-items-center shrink-0">
                   <c.icon className="h-5 w-5" />

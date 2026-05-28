@@ -28,7 +28,7 @@ const Navbar = () => {
         <nav className="hidden lg:flex items-center gap-1">
           {links.map((l) => (
             <a key={l.href} href={l.href}
-              className="px-4 py-2 rounded-md text-sm font-medium text-foreground/80 hover:text-primary hover:bg-primary-soft transition-smooth">
+              className="px-4 py-2 rounded-md text-sm font-medium text-foreground/80 hover:text-primary transition-colors">
               {l.label}
             </a>
           ))}
@@ -36,7 +36,7 @@ const Navbar = () => {
 
         <div className="hidden md:flex items-center gap-3">
           <Button variant="cta" size="lg" asChild>
-            <a href="#ppdb">Daftar PPDB</a>
+            <a href="/ppdb">Daftar PPDB</a>
           </Button>
         </div>
 
@@ -52,12 +52,12 @@ const Navbar = () => {
         <nav className="container-eduka flex flex-col py-4 gap-1">
           {links.map((l) => (
             <a key={l.href} href={l.href} onClick={() => setOpen(false)}
-              className="px-4 py-3 rounded-md text-sm font-medium hover:bg-primary-soft hover:text-primary transition-smooth">
+              className="px-4 py-3 rounded-md text-sm font-medium hover:text-primary transition-colors">
               {l.label}
             </a>
           ))}
           <Button variant="cta" size="lg" className="mt-2" asChild>
-            <a href="#ppdb" onClick={() => setOpen(false)}>Daftar PPDB</a>
+            <a href="/ppdb" onClick={() => setOpen(false)}>Daftar PPDB</a>
           </Button>
         </nav>
       </div>
