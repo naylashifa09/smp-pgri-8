@@ -257,28 +257,7 @@ INSERT INTO storage.buckets (id, name, public, file_size_limit, allowed_mime_typ
 ON CONFLICT (id) DO NOTHING;
 ```
 
-### Langkah 4 — Update MCP (opsional, untuk development)
-
-Edit `~/.config/opencode/opencode.json`:
-
-```json
-{
-  "mcp": {
-    "supabase": {
-      "type": "remote",
-      "url": "https://mcp.supabase.com/mcp?project_ref=PROJECT_ID_BARU",
-      "enabled": true
-    }
-  }
-}
-```
-
-Lalu autentikasi ulang:
-```bash
-opencode mcp auth supabase
-```
-
-### Langkah 5 — Rebuild
+### Langkah 4 — Rebuild
 
 ```bash
 npm run build
