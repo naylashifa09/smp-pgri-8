@@ -79,6 +79,9 @@ const Footer = () => {
         <div className="border-t border-white/10">
           <div className="container-eduka py-4 md:py-5 flex flex-col md:flex-row items-center justify-between gap-3 text-xs md:text-sm opacity-80">
             <p>&copy; 2026 SMP PGRI 8 Kota Bogor. Hak Cipta Dilindungi.</p>
+            <a href="/admin/login" className="hover:text-accent hover:opacity-100 transition-all duration-300">
+              Admin
+            </a>
           </div>
         </div>
       </footer>

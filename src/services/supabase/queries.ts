@@ -51,6 +51,31 @@ export async function getGuruStaff() {
   return data as GuruStaff[];
 }
 
+// ── Berita by slug ────────────────────────────────────────────────────────────
+export async function getBeritaBySlug(slug: string) {
+  const { data, error } = await supabase
+    .from("berita")
+    .select("*")
+    .eq("slug", slug)
+    .eq("status", "published")
+    .single();
+  if (error) throw error;
+  return data as Berita;
+}
+
+// ── Related berita ────────────────────────────────────────────────────────────
+export async function getRelatedBerita(excludeSlug: string, limit = 3) {
+  const { data, error } = await supabase
+    .from("berita")
+    .select("id, title, slug, excerpt, category, thumbnail_url, published_at")
+    .eq("status", "published")
+    .neq("slug", excludeSlug)
+    .order("published_at", { ascending: false })
+    .limit(limit);
+  if (error) throw error;
+  return data as Berita[];
+}
+
 // ── Website Config ────────────────────────────────────────────────────────────
 export async function getWebsiteConfig() {
   const { data, error } = await supabase

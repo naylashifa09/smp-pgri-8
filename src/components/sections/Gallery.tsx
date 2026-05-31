@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { ImageOff } from "lucide-react";
 import { getGaleri, type Galeri } from "@/services/supabase/queries";
 import { Lightbox } from "@/components/ui/lightbox";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
@@ -30,6 +31,44 @@ const spanPattern = [
   "",
   "md:col-span-2",
 ];
+
+type GalleryItemType = Galeri & { category: Category; span: string };
+
+function GalleryItem({ item, onClick }: { item: GalleryItemType; onClick: () => void }) {
+  const [imgError, setImgError] = useState(false);
+
+  return (
+    <div className="relative w-full h-full overflow-hidden" onClick={onClick}>
+      {!imgError ? (
+        <img
+          src={item.media_url}
+          alt={item.title}
+          loading="lazy"
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          onError={() => setImgError(true)}
+        />
+      ) : (
+        <div className="w-full h-full bg-gradient-to-br from-secondary to-muted flex flex-col items-center justify-center gap-2 p-3">
+          <ImageOff className="h-8 w-8 text-muted-foreground/40" />
+          <span className="text-muted-foreground text-xs text-center font-medium leading-tight">{item.title}</span>
+        </div>
+      )}
+      {!imgError && (
+        <>
+          <div className="absolute inset-0 bg-gradient-to-t from-primary-deep/80 via-transparent to-transparent" />
+          <div className="absolute bottom-3 md:bottom-4 left-3 md:left-4 right-3 md:right-4 text-primary-foreground font-display font-bold text-xs md:text-sm">
+            {item.title}
+          </div>
+        </>
+      )}
+      {imgError && (
+        <div className="absolute bottom-3 left-3 right-3">
+          <span className="text-xs font-semibold text-foreground/70 text-center block">{item.title}</span>
+        </div>
+      )}
+    </div>
+  );
+}
 
 const Gallery = () => {
   const [galeri, setGaleri] = useState<(Galeri & { category: Category; span: string })[]>([]);
@@ -114,18 +153,8 @@ const Gallery = () => {
                     exit={{ opacity: 0, scale: 0.8 }}
                     transition={{ duration: 0.3 }}
                     className={`relative overflow-hidden rounded-xl md:rounded-2xl shadow-soft group cursor-pointer ${it.span}`}
-                    onClick={() => handleImageClick(i)}
                   >
-                    <img
-                      src={it.media_url}
-                      alt={it.title}
-                      loading="lazy"
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-primary-deep/80 via-transparent to-transparent" />
-                    <div className="absolute bottom-3 md:bottom-4 left-3 md:left-4 right-3 md:right-4 text-primary-foreground font-display font-bold text-xs md:text-sm">
-                      {it.title}
-                    </div>
+                    <GalleryItem item={it} onClick={() => handleImageClick(i)} />
                   </motion.div>
                 ))}
               </AnimatePresence>

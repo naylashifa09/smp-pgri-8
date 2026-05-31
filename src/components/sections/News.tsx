@@ -108,6 +108,7 @@ const News = () => {
                           alt={n.title}
                           loading="lazy"
                           className="w-full h-full object-cover"
+                          onError={(e) => { (e.currentTarget as HTMLImageElement).src = fallbackImages[i % fallbackImages.length]; }}
                         />
                         {n.category && (
                           <span className="absolute top-3 md:top-4 left-3 md:left-4 px-2 md:px-3 py-1 rounded-full bg-card/90 backdrop-blur-sm text-xs font-bold text-foreground">
