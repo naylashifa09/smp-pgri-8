@@ -1,7 +1,8 @@
 {
   "name": "SMP PGRI 8 Web",
   "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
-  "postCreateCommand": "npm install",
+  "postCreateCommand": "cd smp-pgri8-web && npm install",
+  "workspaceFolder": "/workspaces/smp-pgri-8/smp-pgri8-web",
   "forwardPorts": [8080],
   "portsAttributes": {
     "8080": {
