@@ -1,7 +1,7 @@
 # Anggota Kelompok
-**Gian Padang Andrury Asbi - M0405241063**
-**Hafidz Syadi Ismallah Hidayat - M0405241061**
-**Nayla Shifa Aurelia - M0405241060**
+1. **Gian Padang Andrury Asbi - M0405241063**
+2. **Hafidz Syadi Ismallah Hidayat - M0405241061**
+3. **Nayla Shifa Aurelia - M0405241060**
 
 
 # SMP PGRI 8 Kota Bogor — Website Resmi
