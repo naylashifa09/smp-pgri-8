@@ -6,7 +6,8 @@
   "portsAttributes": {
     "8080": {
       "label": "Dev Server",
-      "onAutoForward": "openPreview"
+      "onAutoForward": "openPreview",
+      "visibility": "public"
     }
   }
 }
