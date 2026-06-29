@@ -9,6 +9,7 @@ import Gallery from "@/components/sections/Gallery";
 import FAQ from "@/components/sections/FAQ";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/layout/Footer";
+import Chatbot from "@/components/Chatbot";   // ← tambah ini
 
 const Index = () => {
   return (
@@ -24,6 +25,7 @@ const Index = () => {
       <FAQ />
       <Contact />
       <Footer />
+      <Chatbot />   // ← tambah ini
     </main>
   );
 };
