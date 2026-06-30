@@ -1,0 +1,71 @@
+text,intent
+jam masuk sekolah berapa,jadwal
+sekolah mulai jam berapa,jadwal
+kapan sekolah mulai,jadwal
+jadwal pelajaran hari senin,jadwal
+jam pulang sekolah,jadwal
+jadwal ujian semester,jadwal
+kapan libur semester,jadwal
+hari apa saja sekolah masuk,jadwal
+kalender akademik tahun ini,jadwal
+jam pelajaran senin sampai jumat,jadwal
+sekolah sampai jam berapa,jadwal
+jadwal mata pelajaran kelas 7,jadwal
+kapan ulangan harian,jadwal
+libur nasional kapan,jadwal
+jam istirahat sekolah berapa menit,jadwal
+cara daftar ppdb,ppdb
+syarat masuk smp pgri 8,ppdb
+pendaftaran siswa baru kapan dibuka,ppdb
+dokumen apa saja untuk ppdb,ppdb
+biaya pendaftaran berapa,ppdb
+cara daftar online ppdb,ppdb
+formulir pendaftaran dimana,ppdb
+gelombang ppdb kapan,ppdb
+persyaratan daftar sekolah,ppdb
+berkas yang diperlukan untuk daftar,ppdb
+ppdb tahun ini kapan,ppdb
+ijazah sd diperlukan untuk daftar,ppdb
+apakah ada tes masuk,ppdb
+quota siswa baru berapa,ppdb
+pendaftaran online bisa lewat mana,ppdb
+ada perpustakaan tidak,fasilitas
+fasilitas sekolah apa saja,fasilitas
+ada laboratorium komputer,fasilitas
+lapangan olahraga ada,fasilitas
+ada kantin di sekolah,fasilitas
+wifi sekolah bisa dipakai siswa,fasilitas
+ada mushola di sekolah,fasilitas
+lab ipa ada tidak,fasilitas
+ruang kelas ber ac tidak,fasilitas
+ada aula untuk kegiatan,fasilitas
+fasilitas internet tersedia,fasilitas
+toilet siswa ada berapa,fasilitas
+ada ruang uks,fasilitas
+lab komputer bisa dipakai kapan,fasilitas
+parkir kendaraan tersedia,fasilitas
+nomor telepon sekolah berapa,kontak
+alamat smp pgri 8 dimana,kontak
+lokasi sekolah dimana,kontak
+cara menghubungi sekolah,kontak
+email sekolah apa,kontak
+whatsapp sekolah berapa,kontak
+instagram sekolah apa,kontak
+dimana letak smp pgri 8,kontak
+kontak kepala sekolah,kontak
+nomor wa tata usaha,kontak
+alamat lengkap sekolah,kontak
+sekolah ada di daerah mana,kontak
+hubungi admin sekolah lewat mana,kontak
+nomor hp sekolah,kontak
+media sosial sekolah apa saja,kontak
+halo selamat pagi,umum
+selamat siang,umum
+apa kabar,umum
+terima kasih infonya,umum
+siapa kamu,umum
+kamu bisa apa saja,umum
+tolong bantu saya,umum
+hai asisten,umum
+halo ada yang bisa dibantu,umum
+oke makasih,umum

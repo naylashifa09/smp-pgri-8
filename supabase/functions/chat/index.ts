@@ -7,6 +7,8 @@
 // Deploy with:
 //   supabase functions deploy chat --no-verify-jwt
 
+import { classify } from "./naiveBayes.ts";
+
 const GROQ_API_KEY = Deno.env.get("GROQ_API_KEY");
 const GROQ_URL = "https://api.groq.com/openai/v1/chat/completions";
 const MODEL = "llama-3.1-8b-instant";
@@ -68,6 +70,18 @@ Deno.serve(async (req) => {
     .slice(-8)
     .filter((m) => m && (m.role === "user" || m.role === "assistant") && typeof m.content === "string")
     .map((m) => ({ role: m.role, content: m.content.slice(0, 2000) }));
+
+  // ── PKB/AI layer: Naive Bayes intent classification ─────────────────────
+  const lastUserMsg = safeMessages.filter((m) => m.role === "user").at(-1)?.content ?? "";
+  const nb = classify(lastUserMsg);
+  if (nb.answer !== null) {
+    const label: Record<string, string> = { jadwal: "Jadwal", ppdb: "PPDB", fasilitas: "Fasilitas", kontak: "Kontak" };
+    const body = `_🤖 Topik terdeteksi: **${label[nb.intent] ?? nb.intent}** (keyakinan ${(nb.confidence * 100).toFixed(1)}%)_\n\n${nb.answer}`;
+    return new Response(new TextEncoder().encode(body), {
+      headers: { ...corsHeaders, "Content-Type": "text/plain; charset=utf-8", "Cache-Control": "no-cache" },
+    });
+  }
+  // ─────────────────────────────────────────────────────────────────────────
 
   let groqRes: Response;
   try {
